@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <RelativeLayout
+                android:id="@+id/tab1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/inputData"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/textPoids"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/editPoids"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/poids"
+                            android:onClick="showWeight"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@id/editPoids"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@id/textPoids"
+                            android:inputType="text"
+                            android:digits="0123456789,.">
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/textTaille"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/editPoids"
+                            android:layout_toLeftOf="@id/editTaille"
+                            android:text="@string/taille"
+                            android:onClick="showSize"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@id/editTaille"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/editPoids"
+                            android:layout_alignParentRight="true"
+                            android:inputType="text"
+                            android:digits="0123456789,."/>
+
+                        <Button
+                            android:id="@+id/doImc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/editTaille"
+                            android:layout_alignParentRight="true"
+                            android:padding="5dp"
+                            android:onClick="doImc"
+                            android:text="@string/doImc" />
+
+                        <Button
+                            android:id="@+id/setDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/doImc"
+                            android:layout_toLeftOf="@id/doImc"
+                            android:onClick="setDate"
+                            android:padding="5dp"
+                            android:text="@string/date" />
+
+                        <Spinner
+                            android:id="@+id/userName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignTop="@+id/doImc"
+                            />
+
+                        <TextView
+                            android:id="@+id/textSteps"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_toLeftOf="@id/setDate"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignTop="@+id/doImc"
+                            android:scrollbars="vertical"
+                            android:text="@string/noSteps"
+                            android:onClick="showSteps"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+                </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/resultAndHistory"
+                    android:layout_below="@id/inputData"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+                    <TextView
+                        android:id="@+id/textImc"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="vertical"
+                        android:text="@string/result"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <ListView
+                        android:id="@+id/listHistory"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignLeft="@id/textImc"
+                        android:layout_below="@id/textImc"
+                        android:drawSelectorOnTop="false"
+                    />
+                    </RelativeLayout>
+                </LinearLayout>
+                
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tab3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/show"
+                android:background="#FFCCCCCC"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+                    <TextView
+                        android:id="@+id/showText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/show"
+                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                    <RadioGroup android:id="@+id/showWhat"
+                        android:layout_width="fill_parent"
+                        android:layout_toRightOf="@id/showText"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <RadioButton android:id="@+id/showWeight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/poidsS"
+                            android:onClick="onShowWhatClicked"/>
+                        <RadioButton android:id="@+id/showSize"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/showWeight"
+                            android:text="@string/tailleS"
+                            android:onClick="onShowWhatClicked"/>
+                        <RadioButton android:id="@+id/showBMI"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/showSize"
+                            android:text="@string/BMI"
+                            android:onClick="onShowWhatClicked"/>
+                        <RadioButton android:id="@+id/showSteps"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/showBMI"
+                            android:text="@string/stepsCount"
+                            android:onClick="onShowWhatClicked"/>
+                    </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/historyStart"
+                android:layout_below="@id/show"
+                android:background="#FFBBBBBB"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+                    <TextView
+                        android:id="@+id/historyStartText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/historyStartText"
+                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    <SeekBar
+                        android:id="@+id/historyStartBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/historyStartText"
+                        android:layout_toRightOf="@id/historyStartText"
+                        android:max="100"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/historyEnd"
+                android:background="#FFCCCCCC"
+                android:layout_below="@id/historyStart"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+                    <TextView
+                        android:id="@+id/historyEndText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/historyEndText"
+                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    <SeekBar
+                        android:id="@+id/historyEndBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignTop="@+id/historyEndText"
+                        android:layout_toRightOf="@id/historyEndText"
+                        android:max="100"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/graph"
+                android:layout_below="@id/historyEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+                <com.androidplot.xy.XYPlot
+                    style="@style/APDefacto.Dark"
+                    android:id="@+id/mySimpleXYPlot"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    title="Weight graph" />
+            </LinearLayout>
+
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</TabHost>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">action settings</string>
+    <string name="hello">Body Mass Index</string>
+    <string name="app_name">Vaenitia</string>
+    <string name="BMI">BMI</string>
+    <string name="poids">Weight (kg)</string>
+    <string name="taille">Size (m)</string>
+    <string name="poidsS">Weight</string>
+    <string name="tailleS">Size</string>
+    <string name="doImc">OK</string>
+    <string name="result"></string>
+    <string name="reset">Oublions !</string>
+    <color name="rouge">#00FF8822</color>
+    <string name="neutre">so</string>
+    <string name="show">Show</string>
+    <string name="maigre">quite short</string>
+    <string name="famelique">too low</string>
+    <string name="bien">perfect</string>
+    <string name="rond">quite much</string>
+    <string name="gros">too much</string>
+    <string name="obese">just huge</string>
+    <string name="morbide">definitely huge</string>
+    <string name="user">useNames</string>
+    <string name="record">record</string>
+    <string name="settings">Settings</string>
+    <string name="userDetail">Record nominative data</string>
+    <string name="userTitle">Group mode</string>
+    <string name="recordTitle">Record data</string>
+    <string name="recordDetails">Record size and weight along with the date</string>
+    <string name="dbFile">dbFile</string>
+    <string name="dbFileTitle">Database name</string>
+    <string name="dbFileDetails">Name of the database</string>
+    <string name="userAdd">userAdd</string>
+    <string name="userAddTitle">Anonymous id</string>
+    <string name="userAddDetails">Name used in anonymous mode</string>
+    <string name="defaultUser">defaultUser</string>
+    <string name="defaultUserTitle">Default user</string>
+    <string name="defaultUserDetails">User at startup</string>
+    <string name="defaultGuest">guest</string>
+    <string name="userDefaultPrefList">userDefaultPrefList</string>
+    <string name="addUser">Add user</string>
+    <string name="removeUser">Remove user</string>
+    <string name="removeUserConfirmation">Confirm user %1$s removal along with all his data.</string>
+    <string name="removeData">Data removal</string>
+    <string name="removeDataConfirmation">Confirm data removal of user %1$s dated %2$s </string>
+    <string name="calcul">Data</string>
+    <string name="historique">History</string>
+    <string name="graphique">Chart</string>
+    <string name="date">Date</string>
+    <string name="days">Days</string>
+    <string name="sayImc">So, for %1$s, we get %2$s, this is %3$s.</string>
+    <string name="imcReferences">BMI Reference</string>
+    <string name="imcReferencesMsg">Set of BMI references\n\rSee http://en.wikipedia.org/wiki/Body_mass_index</string>
+    <string name="upto">Up to</string>
+    <string name="beyond">Beyond</string>
+    <string name="exception">Please check data: it seems missing of inconsistent.\n\r [%1$s]</string>
+    <string name="statistics">From %1$s to %2$s (%3$s days)\n\rWeight %4$s &lt; %5$s &lt; %6$s\n\rHistory of %7$s samples</string>
+    <string name="BMIentry">%1$s %2$s kg %3$s m> BMI=%4$s</string>
+    <string name="updateUser">Update user</string>
+    <string name="backup">Export</string><string name="restore">Import</string>
+    <string name="backupConfirm">Export the database to %1$s ?</string><string name="restoreConfirm">Import the database from %1$s ?</string>
+    <string name="backupSuccess">Database exported to %1$s.</string><string name="restoreSuccess">Database imported from %1$s; restart the application to use it.</string>
+    <string name="defaultFilePath">Target file</string>
+    <string name="mgmt">Database...</string>
+    <string name="historyStartBar">historyStartBar</string>
+    <string name="historyStartText">Since</string>
+    <string name="historyStart">historyStart</string>
+    <string name="historyEndBar">historyEndBar</string>
+    <string name="historyEndText">Until</string>
+    <string name="historyEnd">historyEnd</string>
+    <string name="steps">On %6$s\n\r%1$s steps in %2$s:%3$s:%4$s mn\n\ri.e. %5$s steps/day</string>
+    <string name="stepsCount">steps</string>
+    <string name="stepsDelta">%6$s %1$s steps: %5$s steps/day</string>
+    <string name="noSteps">No steps detected yet</string>
+    <string name="recordSteps">Record a new steps count? Last record:</string>
+    <string name="deleteSteps">Delete this steps count?</string>
+    <string name="userStepsPeriod">userStepsPeriod</string>
+    <string name="userStepsPeriodTitle">Steps sampling Period</string>
+    <string name="userStepsPeriodDetails">Max number of hours between two automatic records of the number of steps</string>
+    <string name="userStepsHistory">User\'s steps history: %1$s records from %2$s to %3$s</string>
+    <string name="showSteps">showRelativeSteps</string>
+    <string name="showStepsTitle">Show incremental steps count</string>
+    <string name="showStepsDetails">Display the real time step counter relative to the last record, otherwise since the last device\'s reboot</string>
+    <string name="users">Users...</string>
+</resources>

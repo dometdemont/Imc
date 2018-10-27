@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <RelativeLayout
+                android:id="@+id/tab1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textPoids"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/editPoids"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/poids"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@id/editPoids"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@id/textPoids"
+                    android:inputType="numberDecimal" >
+                </EditText>
+
+                <TextView
+                    android:id="@+id/textTaille"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/editPoids"
+                    android:layout_toLeftOf="@+id/editTaille"
+                    android:text="@string/taille"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@id/editTaille"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/editPoids"
+                    android:layout_alignParentRight="true"
+                    android:inputType="numberDecimal" />
+
+                <Spinner
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignTop="@+id/doImc" />
+
+                <Button
+                    android:id="@+id/doImc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/editTaille"
+                    android:layout_alignParentRight="true"
+                    android:onClick="doImc"
+                    android:text="@string/doImc" />
+
+                <Button
+                    android:id="@+id/setDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/doImc"
+                    android:layout_toLeftOf="@id/doImc"
+                    android:onClick="setDate"
+                    android:text="@string/date" />
+
+                <TextView
+                    android:id="@+id/textImc"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/doImc"
+                    android:layout_below="@id/doImc"
+                    android:scrollbars="vertical"
+                    android:text="@string/result"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/textSteps"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/textImc"
+                    android:layout_below="@id/textImc"
+                    android:scrollbars="vertical"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <ListView
+                    android:id="@+id/listHistory"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/textSteps"
+                    android:layout_below="@id/textSteps"
+                    android:drawSelectorOnTop="false" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tab3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <com.androidplot.xy.XYPlot
+                    android:id="@+id/mySimpleXYPlot"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginRight="10px"
+                    android:layout_marginTop="10px"
+                    title="A Simple XYPlot Example" />
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</TabHost>
